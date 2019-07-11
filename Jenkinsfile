@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('checkout') {
       steps {
-        git(url: 'https://github.com/nikhil5976/Devopswebapplication.git', branch: 'master', credentialsId: 'none', poll: true)
+        git(url: 'https://github.com/nikhil5976/Devopswebapplication.git', branch: 'master', credentialsId: 'nikhil', poll: true)
       }
     }
     stage('Build') {
