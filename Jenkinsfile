@@ -3,18 +3,15 @@ pipeline {
   stages {
     stage('checkout') {
       steps {
-        git(url: 'https://github.com/nikhil5976/Devopswebapplication.git', branch: 'master', credentialsId: 'nikhil', poll: true)
+        git(url: 'https://github.com/nikhil5976/Devopswebapplication.git', branch: 'master', credentialsId: 'raju', poll: true)
       }
     }
-    stage('Build') {
-      parallel {
-        stage('Build') {
-          steps {
-            echo 'Building my maven web project'
-            bat 'mvn clean package'
+    
+     stage('Build') {
+       steps {
+           echo 'Building my maven web project'
+           bat 'mvn clean package'
           }
         }
-	}
-	}
 	}
 	}
